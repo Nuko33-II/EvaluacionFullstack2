@@ -34,16 +34,13 @@ body {
     font-family: 'Libre Baskerville', 'Baskerville', 'Georgia', serif;
     line-height: 1.7;
     scroll-behavior: smooth;
+    padding-left: 72px;
 }
 
 .contenedor {
     width: min(1000px, calc(100% - 40px));
     margin: 0 auto;
     padding: 40px 0;
-}
-
-body {
-    padding-left: 72px;
 }
 
 .sidebar {
@@ -187,6 +184,9 @@ body {
 .tarjeta-perfil-enlace {
     width: 100%;
     max-width: 340px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .badge-estudiante {
@@ -202,6 +202,14 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.badge-estudiante:hover {
+    background-color: rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
 }
 
 .punto-pulso {
@@ -243,37 +251,13 @@ body {
 
 .focus-text span {
     display: inline-block;
-    opacity: 0.2;
-    filter: blur(8px);
-    transform: translateY(4px) scale(1.05);
-    animation: focusIn 3.2s ease-in-out infinite;
+    opacity: 1;
+    filter: none;
+    transform: none;
 }
 
 .focus-text span.palabra-destacada {
     color: var(--acento);
-}
-
-.focus-text span:nth-child(1) { animation-delay: 0s; }
-.focus-text span:nth-child(2) { animation-delay: 0.2s; }
-.focus-text span:nth-child(3) { animation-delay: 0.4s; }
-.focus-text span:nth-child(4) { animation-delay: 0.6s; }
-
-@keyframes focusIn {
-    0%, 20% {
-        opacity: 0.2;
-        filter: blur(8px);
-        transform: translateY(4px) scale(1.05);
-    }
-    45%, 75% {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateY(0) scale(1);
-    }
-    100% {
-        opacity: 0.2;
-        filter: blur(8px);
-        transform: translateY(4px) scale(1.05);
-    }
 }
 
 .hero-texto p {
@@ -287,12 +271,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 12px;
-}
-
-.tarjeta-perfil-enlace {
-    text-decoration: none;
-    color: inherit;
-    display: block;
 }
 
 .tarjeta-perfil {
@@ -402,36 +380,13 @@ body {
 
 .focus-text-seccion span {
     display: inline-block;
-    opacity: 0.25;
-    filter: blur(6px);
-    transform: translateY(3px);
-    animation: focusInSeccion 3.5s ease-in-out infinite;
+    opacity: 1;
+    filter: none;
+    transform: none;
 }
 
 .focus-text-seccion span.palabra-destacada {
     color: var(--acento);
-}
-
-.focus-text-seccion span:nth-child(1) { animation-delay: 0s; }
-.focus-text-seccion span:nth-child(2) { animation-delay: 0.25s; }
-.focus-text-seccion span:nth-child(3) { animation-delay: 0.5s; }
-
-@keyframes focusInSeccion {
-    0%, 20% {
-        opacity: 0.25;
-        filter: blur(6px);
-        transform: translateY(3px);
-    }
-    45%, 75% {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0.25;
-        filter: blur(6px);
-        transform: translateY(3px);
-    }
 }
 
 .seccion {
