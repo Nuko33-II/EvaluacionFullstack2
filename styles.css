@@ -623,6 +623,11 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     font-family: inherit;
     font-size: 0.95rem;
 }
+.campo textarea {
+    resize: vertical; /* Permite estirar solo hacia abajo, nunca hacia los lados */
+    width: 100%;      /* Ocupa el 100% del contenedor */
+    max-width: 100%;  /* Bloquea que pueda sobrepasar el borde */
+}
 
 .campo input:focus,
 .campo textarea:focus {
