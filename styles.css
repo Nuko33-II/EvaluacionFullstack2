@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
     --fondo: #f4f5f7;
     --superficie: #ffffff;
@@ -29,8 +31,8 @@ body.oscuro {
 body {
     background-color: var(--fondo);
     color: var(--texto);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    font-family: 'Libre Baskerville', 'Baskerville', 'Georgia', serif;
+    line-height: 1.7;
     scroll-behavior: smooth;
 }
 
@@ -40,28 +42,46 @@ body {
     padding: 40px 0;
 }
 
-.encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px max(20px, calc((100% - 1000px) / 2));
-    background-color: var(--superficie);
-    border-bottom: 1px solid var(--borde);
-    position: sticky;
+body {
+    padding-left: 72px;
+}
+
+.sidebar {
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    height: 100vh;
+    width: 72px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--superficie);
+    border-right: 1px solid var(--borde);
+    padding: 24px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 200;
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.sidebar:hover {
+    width: 230px;
+    box-shadow: 10px 0 30px -6px rgba(0, 0, 0, 0.18);
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 14px;
     color: var(--texto);
+    padding: 0 24px 20px 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--borde);
 }
 
 .punto-logo {
+    flex-shrink: 0;
     width: 10px;
     height: 10px;
     background-color: var(--acento);
@@ -70,21 +90,56 @@ body {
 
 .navegacion {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
 }
 
 .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
     color: var(--secundario);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.activo {
     color: var(--acento);
     font-weight: bold;
+    background-color: rgba(37, 99, 235, 0.08);
+}
+
+.nav-icono {
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+    font-size: 1.05rem;
+}
+
+.logo-texto,
+.nav-texto {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar:hover .logo-texto,
+.sidebar:hover .nav-texto {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.boton-tema {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    width: calc(100% - 48px);
+    margin: 12px 24px 0 24px;
 }
 
 .boton {
@@ -97,6 +152,7 @@ body {
     transition: background-color 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
     display: inline-block;
+    font-family: inherit;
 }
 
 .boton.primario {
@@ -120,11 +176,17 @@ body {
 }
 
 .hero {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 30px;
     padding: 40px 0 60px 0;
+}
+
+.tarjeta-perfil-enlace {
+    width: 100%;
+    max-width: 340px;
 }
 
 .badge-estudiante {
@@ -170,9 +232,10 @@ body {
 .focus-text {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.35em;
     font-size: clamp(2rem, 4vw, 2.75rem);
-    font-weight: 900;
+    font-weight: 700;
     margin: 10px 0 16px 0;
     line-height: 1.2;
     color: var(--texto);
@@ -217,10 +280,12 @@ body {
     color: var(--secundario);
     font-size: 1.05rem;
     margin-bottom: 24px;
+    max-width: 640px;
 }
 
 .hero-botones {
     display: flex;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -332,7 +397,7 @@ body {
     flex-wrap: wrap;
     gap: 0.35em;
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .focus-text-seccion span {
@@ -467,6 +532,7 @@ body {
     color: var(--secundario);
     cursor: pointer;
     font-size: 0.9rem;
+    font-family: inherit;
 }
 
 .filtro-btn.activo,
@@ -512,6 +578,7 @@ body.oscuro .tarjeta-proyecto:hover {
     align-items: center;
     justify-content: center;
     font-size: 3.2rem;
+    color: var(--texto);
     border-bottom: 1px solid var(--borde);
     transition: background-color 0.3s ease;
 }
@@ -629,23 +696,34 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
 }
 
 @media (max-width: 768px) {
-    .hero,
     .resumen-grid,
     .habilidades-grid,
     .proyectos-grid {
         grid-template-columns: 1fr;
     }
 
-    .encabezado {
-        flex-direction: column;
-        gap: 12px;
+    body {
+        padding-left: 56px;
+    }
+
+    .sidebar {
+        width: 56px;
+    }
+
+    .sidebar:hover {
+        width: 210px;
+    }
+
+    .barra-progreso {
+        left: 56px;
     }
 }
 
 .barra-progreso {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 72px;
+    right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--acento), var(--acento-hover));
     width: 0%;

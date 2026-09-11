@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Web | Tu Nombre</title>
+    <title>Portafolio Web | Kevin Vargas</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -14,30 +14,44 @@
 
     <div id="barraProgreso" class="barra-progreso"></div>
 
-    <header class="encabezado">
+    <nav class="sidebar" id="sidebar">
         <div class="logo">
             <span class="punto-logo"></span>
-            Mi Portafolio
+            <span class="logo-texto">Mi Portafolio</span>
         </div>
 
-        <nav class="navegacion">
-            <a href="#inicio" class="nav-link activo">Inicio</a>
-            <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-            <a href="#habilidades" class="nav-link">Habilidades</a>
-            <a href="#proyectos" class="nav-link">Proyectos</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
-        </nav>
+        <div class="navegacion">
+            <a href="#inicio" class="nav-link activo"><i class="fa-solid fa-house nav-icono"></i><span class="nav-texto">Inicio</span></a>
+            <a href="#sobre-mi" class="nav-link"><i class="fa-solid fa-user nav-icono"></i><span class="nav-texto">Sobre Mí</span></a>
+            <a href="#habilidades" class="nav-link"><i class="fa-solid fa-code nav-icono"></i><span class="nav-texto">Habilidades</span></a>
+            <a href="#proyectos" class="nav-link"><i class="fa-solid fa-folder-open nav-icono"></i><span class="nav-texto">Proyectos</span></a>
+            <a href="#contacto" class="nav-link"><i class="fa-solid fa-envelope nav-icono"></i><span class="nav-texto">Contacto</span></a>
+        </div>
 
-        <button id="btnTema" class="boton secundario" type="button"><i class="fa-solid fa-moon"></i> Modo oscuro</button>
-    </header>
+        <button id="btnTema" class="boton secundario boton-tema" type="button">
+            <i class="fa-solid fa-moon nav-icono"></i><span class="nav-texto">Modo oscuro</span>
+        </button>
+    </nav>
 
     <main class="contenedor">
 
         <!-- ===== INICIO / HERO ===== -->
         <section id="inicio" class="hero">
+            <a href="https://github.com/Nuko33-II" target="_blank" rel="noopener noreferrer" class="tarjeta-perfil-enlace">
+                <div class="tarjeta-perfil">
+                    <div class="avatar-contenedor">
+                        <img src="https://avatars.githubusercontent.com/u/206617525?s=400&u=631fba0e32b964c4fc903f4c7b423e7dd19a3b94&v=4" alt="Kevin Vargas" class="avatar-img">
+                        <span class="github-badge-flotante"><i class="devicon-github-original"></i></span>
+                    </div>
+                    <h2>Kevin Vargas <i class="fa-solid fa-arrow-up-right-from-square icono-link"></i></h2>
+                    <p class="rol">Desarrollador Fullstack</p>
+                    <span class="badge-estado"><i class="fa-solid fa-circle-check"></i>Actualmente disponible para proyectos</span>
+                </div>
+            </a>
+
             <div class="hero-texto">
                 <div class="badge-estudiante">
-                    <span class="punto-pulso"></span> ESTUDIANTE [TU CARRERA]
+                    <span class="punto-pulso"></span> ESTUDIANTE DUOC UC
                 </div>
                 <h1 class="focus-text">
                     <span>Desarrollador</span>
@@ -45,47 +59,20 @@
                     <span>en</span>
                     <span class="palabra-destacada">Formación</span>
                 </h1>
-                <p>Bienvenido a mi portafolio. Aquí encontrarás los proyectos, habilidades y ejercicios prácticos que he desarrollado durante mis estudios.</p>
+                <p>Bienvenido a mi portafolio. Aquí podrás encontrar información sobre mis proyectos, habilidades y experiencia durante mi formación académica en estos años.</p>
 
                 <div class="hero-botones">
                     <a href="#proyectos" class="boton primario"><i class="fa-solid fa-folder-open"></i> Ver Proyectos</a>
                     <a href="#contacto" class="boton secundario"><i class="fa-solid fa-envelope"></i> Contactar</a>
                 </div>
             </div>
-
-            <a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener noreferrer" class="tarjeta-perfil-enlace">
-                <div class="tarjeta-perfil">
-                    <div class="avatar-contenedor">
-                        <img src="assets/Avatar.jpg" alt="Tu Nombre" class="avatar-img">
-                        <span class="github-badge-flotante"><i class="devicon-github-original"></i></span>
-                    </div>
-                    <h2>Tu Nombre <i class="fa-solid fa-arrow-up-right-from-square icono-link"></i></h2>
-                    <p class="rol">Desarrollador Fullstack</p>
-                    <span class="badge-estado"><i class="fa-solid fa-circle-check"></i> Disponible para proyectos</span>
-                </div>
-            </a>
         </section>
 
         <!-- ===== SOBRE MÍ ===== -->
         <section id="sobre-mi" class="seccion">
             <div class="titulo-seccion">
                 <h2 class="focus-text-seccion"><span>Sobre</span> <span>Mí</span></h2>
-                <p>Un poco de información personal y mi progreso académico</p>
-            </div>
-
-            <div class="resumen-grid">
-                <article class="tarjeta-resumen">
-                    <h3>0+</h3>
-                    <p>Módulos completados</p>
-                </article>
-                <article class="tarjeta-resumen">
-                    <h3>0+</h3>
-                    <p>Proyectos y ejercicios</p>
-                </article>
-                <article class="tarjeta-resumen">
-                    <h3>100%</h3>
-                    <p>Compromiso y aprendizaje</p>
-                </article>
+                <p>Tengo 19 años actualmente y la verdad es que cuando empecé a estudiar Ingeniería en Informática en el Duoc UC de Puerto Montt allá por 2025, entré sin tener mucha idea de lo que estaba haciendo. Me tiré a la piscina nomás. Al principio todo era súper nuevo y confuso, pero con el tiempo he ido aprendiendo un montón de cosas y siento que voy mejorando, soltando la mano con cada proyecto que me toca armar. Pasé de frustrarme con los errores a realmente disfrutar cuando por fin todo funciona. Son temas y desafíos que nunca en la vida creí que me llegarían a enganchar, pero terminó siendo todo lo contrario. Le agarré el gusto y ahora de verdad me motiva seguir metiéndole ganas.</p>
             </div>
         </section>
 
@@ -146,14 +133,14 @@
             <div class="proyectos-grid">
 
                 <!-- Plantilla de tarjeta de proyecto: copia/pega y edita para cada proyecto -->
-                <a href="https://github.com/TU-USUARIO/tu-repo" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
+                <a href="https://github.com/Nuko33-II/EvaluacionFullstack2" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
                     <div class="imagen-proyecto">
-                        <i class="devicon-html5-plain colored"></i>
+                        <i class="fa-brands fa-github"></i>
                     </div>
                     <div class="contenido-proyecto">
                         <span class="categoria-tag">HTML & CSS</span>
-                        <h3>Nombre del Proyecto</h3>
-                        <p>Breve descripción del proyecto: qué hace y qué aprendiste al construirlo.</p>
+                        <h3>Proyecto Pagina HTML</h3>
+                        <p>Breve descripción del proyecto: Esto es el mismo proyecto que estamos viendo y haciendo en el que usamos CSS y JS para la creación de una pagina web.</p>
                         <div class="tags">
                             <span class="tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
                             <span class="tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
@@ -162,14 +149,14 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/TU-USUARIO/tu-repo" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="javascript">
+                <a href="https://github.com/Nuko33-II/Evaluacion-1-Fullstack" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="javascript">
                     <div class="imagen-proyecto">
-                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="fa-brands fa-github"></i>
                     </div>
                     <div class="contenido-proyecto">
                         <span class="categoria-tag">JavaScript</span>
-                        <h3>Nombre del Proyecto</h3>
-                        <p>Breve descripción del proyecto: qué hace y qué aprendiste al construirlo.</p>
+                        <h3>Proyecto QuickOrder</h3>
+                        <p>Breve descripción del proyecto: esto es un proyecto de Spring Boot para un sistema de gestión de pedidos y clientes.</p>
                         <div class="tags">
                             <span class="tag"><i class="devicon-javascript-plain colored"></i> JS</span>
                             <span class="tag"><i class="fa-solid fa-diagram-project"></i> DOM</span>
@@ -177,14 +164,14 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/TU-USUARIO/tu-repo" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
+                <a href="https://github.com/Nuko33-II/mspedidos-1" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
                     <div class="imagen-proyecto">
-                        <i class="devicon-java-plain colored"></i>
+                        <i class="fa-brands fa-github"></i>
                     </div>
                     <div class="contenido-proyecto">
                         <span class="categoria-tag">Java & Backend</span>
-                        <h3>Nombre del Proyecto</h3>
-                        <p>Breve descripción del proyecto: qué hace y qué aprendiste al construirlo.</p>
+                        <h3>Proyecto PruebaRender</h3>
+                        <p>Breve descripción del proyecto: Durante el desarrollo de este proyecto, tuve que implementar de forma secundaria Render y Dockerfile .</p>
                         <div class="tags">
                             <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
                             <span class="tag"><i class="fa-solid fa-cubes-stacked"></i> POO</span>
@@ -199,7 +186,7 @@
         <section id="contacto" class="seccion">
             <div class="titulo-seccion">
                 <h2 class="focus-text-seccion"><span>Contacto</span></h2>
-                <p>¿Tienes alguna duda o consulta? Escríbeme un mensaje.</p>
+                <p>En caso de que tengas alguna pregunta o comentario, no dudes en contactarme.</p>
             </div>
 
             <div class="contacto-contenedor">
