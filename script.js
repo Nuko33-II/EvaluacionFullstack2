@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 mensajeEstado.textContent = 'Enviando tu mensaje...';
-                mensajeEstado.style.borderColor = 'var(--primario, #3b82f6)';
-                mensajeEstado.style.color = 'var(--primario, #3b82f6)';
+                mensajeEstado.style.borderColor = 'var(--acento, #146c6e)';
+                mensajeEstado.style.color = 'var(--acento, #146c6e)';
                 mensajeEstado.hidden = false;
 
                 // 3. Envío asíncrono con fetch()
